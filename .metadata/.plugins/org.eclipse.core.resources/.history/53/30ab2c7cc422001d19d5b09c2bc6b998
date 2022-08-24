@@ -1,0 +1,69 @@
+package in.ashokit.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import in.ashokit.entity.Plan;
+import in.ashokit.entity.PlanCategory;
+import in.ashokit.repo.PlanCategoryRepo;
+import in.ashokit.repo.PlanRepo;
+
+public class PlanServiceImpl implements PlanService{
+	
+	@Autowired
+	private PlanRepo planRepo;
+	
+	@Autowired
+	private PlanCategoryRepo planCategoryRepo;
+	
+
+	@Override
+	public Map<Integer, String> getPlanCategories() {
+		// TODO Auto-generated method stub
+		List<PlanCategory> categories= planCategoryRepo.findAll();
+		Map<Integer,String> categoryMap=new HashMap();
+		
+		return null;
+	}
+
+	@Override
+	public boolean savePlan(Plan plan) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<Plan> getAllPlans() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updatePlan(Plan plan) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Plan editdetails(Integer planId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean hardDelete(Integer planId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean softDelete(Integer planId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

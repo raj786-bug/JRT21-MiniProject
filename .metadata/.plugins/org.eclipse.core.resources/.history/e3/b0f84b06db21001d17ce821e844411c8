@@ -1,0 +1,10 @@
+package in.ashokit.entity;
+
+
+@Entity
+@Table(name="PLAN_MASTER")
+@Data
+
+public class Plan {
+
+}

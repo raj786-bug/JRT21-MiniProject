@@ -1,0 +1,23 @@
+package in.ashokit.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+
+import in.ashokit.entity.Plan;
+
+public interface PlanService {
+	// Integer is id as key and String for plan category as value
+	public Map<Integer,String> getPlanCategories();
+	public boolean savePlan(Plan plan);
+	public List<Plan> getAllPlans();
+    public boolean updatePlan(Plan plan);
+    public Plan editdetails(Integer planId);
+    public boolean hardDelete(Integer planId);
+    public boolean softDelete(Integer planId);
+    
+	
+	
+
+}
